@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
@@ -17,6 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "./",
             "outputPath": "dist/angular-golden-layout-v2",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -32,7 +34,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/cyan-orange.css",
+              "src/customThemes.scss",
+              "src/styles.scss",
+              "node_modules/golden-layout/dist/css/goldenlayout-base.css",
+              "node_modules/golden-layout/dist/css/themes/goldenlayout-dark-theme.css",
             ],
             "scripts": []
           },
@@ -91,6 +97,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.scss"
             ],
             "scripts": []
