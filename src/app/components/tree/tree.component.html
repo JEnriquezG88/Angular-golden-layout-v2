@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="listTitle">Element list:</h1>
+  <mat-list role="list">
+    @for (item of [].constructor(50); track $index){
+    <mat-list-item role="listitem">Item {{$index}}</mat-list-item>
+    }
+  </mat-list>
+</div>

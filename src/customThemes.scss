@@ -1,7 +1,7 @@
 
 .lm_tab {
   background-color: #111415 !important;
-  height: 32px !important;
+  height: 27px !important;
   width: 150px !important;
   display: flex !important;
   align-items: center !important;
@@ -22,13 +22,11 @@
 }
 
 .lm_header {
-  height: 40px !important;
+  border: 0px solid red !important;
   display: flex !important;
   align-items: center !important;
-  background-color: #050505 !important;
   .lm_tab.lm_active.lm_focused{
     background-color: #0f2d2d !important;
-    height: 32px !important;
     margin: 0 !important;
     margin: 0 !important;
     margin-right: 2px !important;
@@ -42,13 +40,13 @@
 }
 
 .lm_controls {
-  display: none !important;
+  right: 5px !important;
 }
 
 .lm_close_tab {
   height: 100% !important;
   top: 0 !important;
-  right: 10px !important;
+  right: 15px !important;
   opacity: 0.3 !important;
   &:hover {
     opacity: 1 !important;
@@ -66,4 +64,7 @@
   &.lm_vertical{
     height: 3px !important;
   }
+}
+.lm_items {
+  height: 100% !important;
 }

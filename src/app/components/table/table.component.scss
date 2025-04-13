@@ -1,7 +1,7 @@
 .container {
   width: 100%;            /* o el ancho que necesites */
   height: 100%;          /* o la altura que necesites */
-  overflow: auto;         /* permite scroll solo si es necesario */
+  overflow-y: auto;         /* permite scroll solo si es necesario */
 }
 /* Scrollbar general */
 ::-webkit-scrollbar {

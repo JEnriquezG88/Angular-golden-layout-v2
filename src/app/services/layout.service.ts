@@ -1,5 +1,5 @@
 import { ApplicationRef, ComponentRef, createComponent, EnvironmentInjector, inject, Injectable, Type } from '@angular/core';
-import { ContentItem, GoldenLayout, JsonValue, LayoutConfig } from 'golden-layout';
+import { GoldenLayout, LayoutConfig } from 'golden-layout';
 import { FilesService } from './files.service';
 
 @Injectable({
@@ -12,7 +12,6 @@ export class LayoutService {
   private resolver: EnvironmentInjector = inject(EnvironmentInjector);
   private appRef: ApplicationRef = inject(ApplicationRef);
   private filesService: FilesService = inject(FilesService);
-  private resizeObserver!: ResizeObserver;
   private layoutConfig: LayoutConfig = {
     root: {
       type: 'row',
@@ -22,6 +21,9 @@ export class LayoutService {
       showPopoutIcon: false,
       showMaximiseIcon: false,
       showCloseIcon: true
+    },
+    dimensions: {
+      headerHeight: 35
     }
   }
 
@@ -29,7 +31,7 @@ export class LayoutService {
     this.containerElement = containerElement;
     this.layout = new GoldenLayout(this.containerElement);
     this.layout.loadLayout(this.layoutConfig);
-    this.registerObserver();
+    this.initLayoutStateChanged();
   }
 
   public addNewComponent(title: string, component: Type<any>): void {
@@ -85,16 +87,17 @@ export class LayoutService {
     return componentRef;
   }
 
-  private registerObserver(): void {
+  private initLayoutStateChanged(): void {
     if (this.checkForErrors()) return;
 
-    this.resizeObserver = new ResizeObserver(() => {
-      const width = this.containerElement?.clientWidth;
-      const height = this.containerElement?.clientHeight;
-
-      this.layout.setSize(width, height);
+    this.layout.on('stateChanged', () => {
+      this.resizeLayout();
     });
-    this.resizeObserver.observe(this.containerElement);
+  }
+  private resizeLayout() {
+    let width = window.innerWidth;
+    let height = window.innerHeight - 35;
+    this.layout.setSize(width, height);
   }
 
   private checkForErrors(): boolean {

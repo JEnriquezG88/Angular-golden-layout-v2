@@ -5,6 +5,7 @@ import { LayoutService } from '../../services/layout.service';
 import { TestComponent } from '../test/test.component';
 import { FilesService } from '../../services/files.service';
 import { TableComponent } from '../table/table.component';
+import { TreeComponent } from '../tree/tree.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -23,6 +24,9 @@ export class ToolbarComponent {
         break;
       case 'table':
         this.layoutService.addNewComponent('Table Component', TableComponent);
+        break;
+      case 'tree':
+        this.layoutService.addNewComponent('Tree Component', TreeComponent);
         break;
     }
   }
@@ -67,6 +71,9 @@ export class ToolbarComponent {
           break;
         case 'tableComponent':
           this.layoutService.registerNewComponent(component, TableComponent);
+          break;
+        case 'treeComponent':
+          this.layoutService.registerNewComponent(component, TreeComponent);
           break;
       }
     }

@@ -3,7 +3,8 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 35px 1fr;
+  grid-template-rows: 35px 100fr;
+  background-color: black;
 }
 .toolbarContainer{
   width: 100%;
@@ -12,8 +13,7 @@
   align-items: center;
   background-color: #111415;
 }
-.layoutContainer {
-  flex: auto;
-  width: 100vw;
+.layoutContainer{
+  width: 100%;
   height: 100%;
 }
