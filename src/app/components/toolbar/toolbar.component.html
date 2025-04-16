@@ -4,19 +4,19 @@
     <mat-menu #layout="matMenu">
       <button mat-menu-item (click)="saveLayout()">Save Layout</button>
       <button mat-menu-item [matMenuTriggerFor]="load">Load Layout</button>
-      <button mat-menu-item>Clean Layout</button>
+      <button mat-menu-item (click)="clearLayout()">Clean Layout</button>
     </mat-menu>
 
     <mat-menu #load="matMenu">
       <button mat-menu-item [matMenuTriggerFor]="presets">Presets</button>
-      <button mat-menu-item (click)="loadlayout('custom')">Load Custom Preset</button>
+      <button mat-menu-item (click)="loadLayout(PresetType.Custom)">Load Custom Preset</button>
     </mat-menu>
 
     <mat-menu #presets="matMenu">
-      <button mat-menu-item>Stack Preset</button>
-      <button mat-menu-item>Row Preset</button>
-      <button mat-menu-item>Column Preset</button>
-      <button mat-menu-item>Combined Preset</button>
+      <button mat-menu-item (click)="loadLayout(PresetType.Stack)">Stack Preset</button>
+      <button mat-menu-item (click)="loadLayout(PresetType.Row)">Row Preset</button>
+      <button mat-menu-item (click)="loadLayout(PresetType.Column)">Column Preset</button>
+      <button mat-menu-item (click)="loadLayout(PresetType.Combined)">Combined Preset</button>
     </mat-menu>
   </section>
 
@@ -27,16 +27,15 @@
     </mat-menu>
 
     <mat-menu #newComponents="matMenu">
-      <button mat-menu-item (click)="addComponent('test')">Test</button>
-      <button mat-menu-item (click)="addComponent('table')">Table</button>
-      <button mat-menu-item (click)="addComponent('tree')">Tree</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.Test)">Test</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.Table)">Table</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.Tree)">Tree</button>
       <button mat-menu-item [matMenuTriggerFor]="graphs">Graph</button>
     </mat-menu>
     <mat-menu #graphs="matMenu">
-      <button mat-menu-item (click)="addComponent('verticalGraph')">Vertical Bar Chart</button>
-      <button mat-menu-item (click)="addComponent('horizontalGraph')">Horizontal Bar Chart</button>
-      <button mat-menu-item (click)="addComponent('piegraph')">Pie Bar Chart</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.VerticalGraph)">Vertical Bar Chart</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.HorizontalGraph)">Horizontal Bar Chart</button>
+      <button mat-menu-item (click)="addComponent(ComponentType.PieGraph)">Pie Bar Chart</button>
     </mat-menu>
   </section>
-
 </div>

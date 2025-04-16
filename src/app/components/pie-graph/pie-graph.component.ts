@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 @Component({
   selector: 'app-pie-graph',
@@ -7,7 +7,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   styleUrl: './pie-graph.component.scss'
 })
 export class PieGraphComponent {
-  @Input() graphType: string = 'horizontal';
 
   view: [number, number] = [700, 400];
 

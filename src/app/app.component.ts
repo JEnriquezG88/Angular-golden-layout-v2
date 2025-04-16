@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
 import { LayoutComponent } from './components/layout/layout.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
+
 @Component({
   selector: 'app-root',
   imports: [LayoutComponent, ToolbarComponent],

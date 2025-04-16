@@ -48,4 +48,17 @@ export class FilesService {
     });
   }
 
+  public async loadJsonFileFromPath(filePath: string): Promise<any> {
+    try {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        throw new Error(`Error al cargar el archivo: ${response.statusText}`);
+      }
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      throw new Error('No se pudo cargar el archivo JSON desde la ruta proporcionada.');
+    }
+  }
+
 }

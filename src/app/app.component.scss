@@ -1,19 +1,22 @@
+/* Contenedor principal */
 .container {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 35px 100fr;
-  background-color: black;
+  grid-template-rows: 35px 1fr;
+  background-color: var(--layout-bg);
 }
-.toolbarContainer{
+
+.toolbarContainer {
   width: 100%;
   height: 35px;
   display: flex;
   align-items: center;
-  background-color: #111415;
+  background-color: var(--toolbar-bg);
 }
-.layoutContainer{
+
+.layoutContainer {
   width: 100%;
   height: 100%;
 }

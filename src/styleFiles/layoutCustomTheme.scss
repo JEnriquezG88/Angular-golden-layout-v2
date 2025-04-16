@@ -1,7 +1,7 @@
 
 .lm_tab {
   overflow-x: hidden !important;
-  background-color: #111415 !important;
+  background-color: var(--toolbar-bg) !important;
   height: 27px !important;
   width: 150px !important;
   display: flex !important;
@@ -15,20 +15,20 @@
   .lm_title {
     font-size: 0.875rem !important;
     font-weight: normal !important;
-    color: #00dddd !important;
+    color: var(--tab-title-color) !important;
   }
   &:hover {
-    background-color: #2f3537 !important;
+    background-color: var(--tab-hover-bg) !important;
   }
 }
 
 .lm_header {
-  border: 0px solid red !important;
+  border: 0 !important;
   display: flex !important;
   align-items: center !important;
+  
   .lm_tab.lm_active.lm_focused{
-    background-color: #0f2d2d !important;
-    margin: 0 !important;
+    background-color: var(--tab-active-bg) !important;
     margin: 0 !important;
     margin-right: 2px !important;
   }
@@ -55,7 +55,7 @@
 }
 
 .lm_content {
-  background-color: #1d2021 !important;
+  background-color: var(--layout-bg) !important;
 }
 
 .lm_splitter {

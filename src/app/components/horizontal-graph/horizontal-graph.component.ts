@@ -7,7 +7,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   styleUrl: './horizontal-graph.component.scss'
 })
 export class HorizontalGraphComponent {
-  @Input() graphType: string = 'horizontal';
 
   view: [number, number] = [700, 400];
 
