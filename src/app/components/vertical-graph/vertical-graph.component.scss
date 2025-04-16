@@ -1,0 +1,32 @@
+.container {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.graphContainer{
+  background-color: #111415;
+  padding: 20px;
+}
+.chart-legend .legend-title-text {
+  color: white !important;
+}
+.dark-theme {
+  background-color: #1a1a1a;  /* Fondo oscuro */
+  padding: 16px;
+  border-radius: 8px;
+
+  /* Cambia el color del texto (leyenda, ejes, etc.) a blanco */
+    .ngx-charts {
+      text {
+        fill: white !important;  /* Texto blanco */
+      }
+
+    /* Opcional: Cambia el fondo del gráfico */
+    .ngx-charts-outer {
+      background-color: #1a1a1a;
+    }
+  }
+}

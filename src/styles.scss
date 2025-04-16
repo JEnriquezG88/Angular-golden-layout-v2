@@ -31,3 +31,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #5a5a5a;
 }
+
+.legend-title-text {
+  color: white !important;
+}
+text {
+fill: #a0aabe;
+}
+.chart-legend .legend-label .active .legend-label-text {
+  color: white !important;
+}

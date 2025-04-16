@@ -30,6 +30,12 @@
       <button mat-menu-item (click)="addComponent('test')">Test</button>
       <button mat-menu-item (click)="addComponent('table')">Table</button>
       <button mat-menu-item (click)="addComponent('tree')">Tree</button>
+      <button mat-menu-item [matMenuTriggerFor]="graphs">Graph</button>
+    </mat-menu>
+    <mat-menu #graphs="matMenu">
+      <button mat-menu-item (click)="addComponent('verticalGraph')">Vertical Bar Chart</button>
+      <button mat-menu-item (click)="addComponent('horizontalGraph')">Horizontal Bar Chart</button>
+      <button mat-menu-item (click)="addComponent('piegraph')">Pie Bar Chart</button>
     </mat-menu>
   </section>
 

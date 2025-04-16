@@ -35,7 +35,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/cyan-orange.css",
-              "src/customThemes.scss",
+              "src/styleFiles/layoutCustomTheme.scss",
               "src/styles.scss",
               "node_modules/golden-layout/dist/css/goldenlayout-base.css",
               "node_modules/golden-layout/dist/css/themes/goldenlayout-dark-theme.css",

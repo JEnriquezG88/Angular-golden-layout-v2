@@ -46,7 +46,7 @@ export class LayoutService {
       importedComponents: this.registerComponents,
       layoutData: this.layout.saveLayout()
     }
-    this.filesService.saveJsonFile(currentLayout, 'golden-layout-config.json');
+    this.filesService.saveJsonFile(currentLayout, 'layout-config.json');
   }
   public loadLayout(loadedLayout: any): void {
     const config = LayoutConfig.fromResolved(loadedLayout);

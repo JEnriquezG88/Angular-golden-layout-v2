@@ -6,6 +6,9 @@ import { TestComponent } from '../test/test.component';
 import { FilesService } from '../../services/files.service';
 import { TableComponent } from '../table/table.component';
 import { TreeComponent } from '../tree/tree.component';
+import { VerticalGraphComponent } from '../vertical-graph/vertical-graph.component';
+import { HorizontalGraphComponent } from '../horizontal-graph/horizontal-graph.component';
+import { PieGraphComponent } from '../pie-graph/pie-graph.component'
 
 @Component({
   selector: 'app-toolbar',
@@ -27,6 +30,15 @@ export class ToolbarComponent {
         break;
       case 'tree':
         this.layoutService.addNewComponent('Tree Component', TreeComponent);
+        break;
+      case 'verticalGraph':
+        this.layoutService.addNewComponent('Vertical Graph', VerticalGraphComponent);
+        break;
+      case 'horizontalGraph':
+        this.layoutService.addNewComponent('Horizontal Graph', HorizontalGraphComponent);
+        break;
+      case 'piegraph':
+        this.layoutService.addNewComponent('Pie Graph', PieGraphComponent);
         break;
     }
   }
@@ -60,7 +72,6 @@ export class ToolbarComponent {
       case 'conbined':
         break;
     }
-
   }
 
   private registerComponentsInLoad(loadedLayout: any): void {
@@ -74,6 +85,15 @@ export class ToolbarComponent {
           break;
         case 'treeComponent':
           this.layoutService.registerNewComponent(component, TreeComponent);
+          break;
+        case 'verticalGraph':
+          this.layoutService.registerNewComponent(component, VerticalGraphComponent);
+          break;
+        case 'horizontalGraph':
+          this.layoutService.registerNewComponent(component, HorizontalGraphComponent);
+          break;
+        case 'pieGraph':
+          this.layoutService.registerNewComponent(component, PieGraphComponent);
           break;
       }
     }
